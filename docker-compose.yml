@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   web:
-    image: "daily:web"
+    build: ./web 
     ports:
         - 80:80
         - 443:443
@@ -10,7 +10,6 @@ services:
     container_name: "daily_web"
   db:
     build: ./db
-    image: "daily:db"
     ports:
         - 4306:3306
     expose:
